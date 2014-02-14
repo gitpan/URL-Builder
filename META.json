@@ -57,7 +57,7 @@
    "provides" : {
       "URL::Builder" : {
          "file" : "lib/URL/Builder.pm",
-         "version" : "0.02"
+         "version" : "0.03"
       }
    },
    "release_status" : "stable",
@@ -71,5 +71,5 @@
          "web" : "https://github.com/tokuhirom/URL-Builder"
       }
    },
-   "version" : "0.02"
+   "version" : "0.03"
 }

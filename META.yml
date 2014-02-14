@@ -29,7 +29,7 @@ no_index:
 provides:
   URL::Builder:
     file: lib/URL/Builder.pm
-    version: 0.02
+    version: 0.03
 requires:
   URL::Encode: 0
   perl: 5.008005
@@ -37,4 +37,4 @@ resources:
   bugtracker: https://github.com/tokuhirom/URL-Builder/issues
   homepage: https://github.com/tokuhirom/URL-Builder
   repository: git://github.com/tokuhirom/URL-Builder.git
-version: 0.02
+version: 0.03
