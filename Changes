@@ -1,5 +1,9 @@
 Revision history for Perl extension URL-Builder
 
+0.04 2014-02-19T07:15:06Z
+
+    - use WWW::Form::UrlEncoded(kazeburo)
+
 0.03 2014-02-14T00:31:20Z
 
     - Support multi-byte chars.
