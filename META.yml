@@ -29,14 +29,14 @@ no_index:
 provides:
   URL::Builder:
     file: lib/URL/Builder.pm
-    version: 0.04
+    version: 0.05
 requires:
-  WWW::Form::UrlEncoded: 0.13
+  WWW::Form::UrlEncoded: 0.14
   perl: 5.008005
 resources:
   bugtracker: https://github.com/tokuhirom/URL-Builder/issues
   homepage: https://github.com/tokuhirom/URL-Builder
   repository: git://github.com/tokuhirom/URL-Builder.git
-version: 0.04
+version: 0.05
 x_contributors:
   - 'Masahiro Nagano <kazeburo@gmail.com>'

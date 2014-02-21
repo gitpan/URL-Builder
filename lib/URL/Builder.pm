@@ -3,13 +3,13 @@ use 5.008005;
 use strict;
 use warnings;
 
-our $VERSION = "0.04";
+our $VERSION = "0.05";
 
 use parent qw(Exporter);
 
-use WWW::Form::UrlEncoded qw(build_urlencoded);
+use WWW::Form::UrlEncoded qw(build_urlencoded_utf8 build_urlencoded);
 
-our @EXPORT = qw(build_url);
+our @EXPORT = qw(build_url build_url_utf8);
 
 sub build_url {
     my %args = @_;
@@ -24,6 +24,23 @@ sub build_url {
 
     if ( defined $args{query} ) {
         $uri .= '?' . build_urlencoded($args{query});
+    }
+    return $uri;
+}
+
+sub build_url_utf8 {
+    my %args = @_;
+
+    my $uri;
+    if (exists $args{base_uri}) {
+        $args{base_uri} =~ s!\/\z!!;
+        $uri = $args{base_uri};
+    }
+
+    $uri .= $args{path};
+
+    if ( defined $args{query} ) {
+        $uri .= '?' . build_urlencoded_utf8($args{query});
     }
     return $uri;
 }
@@ -58,7 +75,7 @@ URL::Builder is really simple URL string building library.
 
 =over 4
 
-=item build_url(%args)
+=item C<< build_url(%args) >>
 
 Build URL from the hash.
 
@@ -73,6 +90,10 @@ Arguments:
 =item query: ArrayRef[Str]|HashRef[Str]
 
 =back
+
+=item C<< build_url_utf8(%args) >>
+
+Same as build_url, but this function encode decoded string as UTF-8 automatically.
 
 =back
 

@@ -8,5 +8,6 @@ lib/URL/Builder.pm
 minil.toml
 t/00_compile.t
 t/01_simple.t
+t/02_utf8.t
 META.yml
 MANIFEST
